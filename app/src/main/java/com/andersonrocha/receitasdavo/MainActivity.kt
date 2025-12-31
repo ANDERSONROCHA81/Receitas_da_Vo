@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 class MainActivity : AppCompatActivity() {
 
     private lateinit var rvReceitas: RecyclerView
+    private lateinit var receitasAdapter: ReceitasAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +33,9 @@ class MainActivity : AppCompatActivity() {
         )
 
         //Adapter
-        rvReceitas.adapter = ReceitasAdapter()
+        receitasAdapter = ReceitasAdapter()
+        rvReceitas.adapter = receitasAdapter
+        receitasAdapter.configurarLista(lista)
 
         //Layout
         rvReceitas.layoutManager = LinearLayoutManager(this)
