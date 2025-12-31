@@ -27,10 +27,14 @@ class MainActivity : AppCompatActivity() {
         rvReceitas = findViewById(R.id.rv_receitas)
 
         val lista = listOf(
-            Receita("Almôndegas", "25 min", R.drawable.almondegas),
-            Receita("Bobó de camarão", "45 min", R.drawable.bobo_de_camarao),
-            Receita("Bolo de carne", "30 min", R.drawable.bolo_de_carne),
-            Receita("Panqueca de carne moída", "15 min", R.drawable.panquecas),
+            Receita("Almôndegas", "25 min", R.drawable.almondegas,
+                listOf("1KG de Carne moída", "Cebola", "Alho", "Orégano")),
+            Receita("Bobó de camarão", "45 min", R.drawable.bobo_de_camarao,
+                listOf("2KG de camarão", "Tomate", "1l de creme de leite", "Cheiro verde")),
+            Receita("Bolo de carne", "30 min", R.drawable.bolo_de_carne,
+                listOf("2KG de carne moída", "1KG de farinha de trigo", "Cebola", "Alho")),
+            Receita("Panqueca de carne moída", "15 min", R.drawable.panquecas,
+                listOf("#1KG de carne moída", "1KG de farinha de trigo", "Molho de tomate", "Alho")),
         )
 
         //Adapter

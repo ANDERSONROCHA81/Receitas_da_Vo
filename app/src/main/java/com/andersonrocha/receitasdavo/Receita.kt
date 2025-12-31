@@ -8,7 +8,8 @@ import java.io.Serializable
 data class Receita(
     val titulo: String,
     val tempo: String,
-    val resIdImagem: Int
+    val resIdImagem: Int,
+    val ingredientes: List<String>
 ) : Parcelable
 
 //data class Receita(
