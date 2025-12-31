@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import androidx.recyclerview.widget.RecyclerView.Adapter
 
@@ -34,6 +35,9 @@ class ReceitasAdapter : Adapter<ReceitasAdapter.ReceitaViewHolder>() {
         fun bind(receita: Receita) {
             textTitulo.text = receita.titulo
             textTempo.text = receita.tempo
+            imgReceita.setImageDrawable(
+                ContextCompat.getDrawable(view.context, receita.resIdImagem)
+            )
         }
     }
 
